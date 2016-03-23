@@ -6,3 +6,13 @@ node_js:
 script:
 - npm test
 
+before_deploy:
+- npm config set registry "${NPM_REGISTRY}"
+- npm config set _auth "${API_KEY}"
+ 
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: tahatori@zlab.co.jp
+  api_key: invalid
+
