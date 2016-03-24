@@ -18,6 +18,9 @@ deploy:
   provider: script
   script:
   - npm publish
+after_deploy:
+- cat /home/travis/build/hatotaka/node-helloworld-lib/npm-debug.log
+
  
 #deploy:
 #  skip_cleanup: true
