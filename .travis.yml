@@ -8,10 +8,10 @@ script:
 - npm test
 
 before_deploy:
-- HOME=. npm config set registry "${NPM_REGISTRY}"
-- HOME=. npm config set _auth "${NPM_AUTH}"
-- HOME=. npm config set email "${NPM_EMAIL}"
-- HOME=. npm config set always-auth true
+- npm config set registry "${NPM_REGISTRY}"
+- npm config set _auth "${NPM_AUTH}"
+- npm config set email "${NPM_EMAIL}"
+- npm config set always-auth true
 
  
 deploy:
