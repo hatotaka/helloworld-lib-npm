@@ -13,19 +13,10 @@ before_deploy:
 - HOME=. npm config set email "${NPM_EMAIL}"
 - HOME=. npm config set always-auth true
 
+ 
 deploy:
   skip_cleanup: true
-  provider: script
-  script:
-  - npm publish
-
-after_script:
-- cat /home/travis/build/hatotaka/node-helloworld-lib/npm-debug.log
-
- 
-#deploy:
-#  skip_cleanup: true
-#  provider: npm
-#  email: tahatori@zlab.co.jp
-#  api_key: invalid
+  provider: npm
+  email: tahatori@zlab.co.jp
+  api_key: invalid
 
